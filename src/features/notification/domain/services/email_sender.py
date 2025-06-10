@@ -1,0 +1,9 @@
+# src/features/notification/domain/services/email_sender.py
+from typing import Protocol
+from pydantic import EmailStr
+
+
+class EmailSender(Protocol):
+    async def send_verification_email(self, to: EmailStr, token: str) -> None: ...
+    async def send_reset_password_email(self, to: EmailStr, token: str) -> None: ...
+    async def send_change_email_email(self, to: EmailStr, token: str) -> None: ...
