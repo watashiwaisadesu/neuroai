@@ -21,7 +21,9 @@ from src.features.identity.domain.entities.user_entity import UserEntity
 
 playground_router = APIRouter()
 
-@playground_router.websocket("/playground/{bot_uid}")
+@playground_router.websocket(
+    "/playground/{bot_uid}"
+)
 @inject # Add inject for mediator
 async def bot_playground_websocket(
     websocket: WebSocket,
@@ -34,6 +36,7 @@ async def bot_playground_websocket(
     Authenticates user via Bearer token in the Authorization header.
     Uses Mediator to dispatch connection handling.
     """
+    print("aa")
     logger.info(f"Playground WebSocket: User {current_user.uid} connecting to bot {bot_uid}")
 
     connection_command = HandlePlaygroundConnectionCommand(

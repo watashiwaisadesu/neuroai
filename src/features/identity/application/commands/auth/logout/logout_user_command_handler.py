@@ -1,11 +1,12 @@
 # src/features/identity/application/commands/auth/logout/logout_user_command_handler.py
+from src.features.identity.api.v1.dtos.auth.login_user_dto import MinimalUserDTO
 from src.infra.logging.setup_async_logging import async_logger
 logger = async_logger
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 from src.core.base.command import BaseCommandHandler
 from src.core.mediator.mediator import Mediator
-from src.features.identity.api.v1.dtos.auth.login_user_dto import MinimalUserDTO
+# from src.features.identity.api.v1.dtos.auth.login_user_dto import MinimalUserDTO
 from src.features.identity.api.v1.dtos.auth.logout_user_dto import LogoutUserResponseDTO
 from src.features.identity.application.commands.auth.logout.logout_user_command import LogoutUserCommand
 from src.features.identity.application.services.token_blocklist_service import TokenBlocklistService
@@ -57,7 +58,6 @@ class LogoutUserCommandHandler(BaseCommandHandler[LogoutUserCommand, LogoutUserR
         user_email = user_payload.get("email")
         user_uid = user_payload.get("user_uid")
         user_role = user_payload.get("role")
-
         if not user_email or not user_uid:
             logger.warning("Logout attempt: Token 'user' payload missing email or uid.")
 
@@ -76,6 +76,6 @@ class LogoutUserCommandHandler(BaseCommandHandler[LogoutUserCommand, LogoutUserR
             user=MinimalUserDTO(
                 email=user_email or "N/A",
                 uid=user_uid or "N/A",
-                role=user_role or "N/A"
+                role=user_role or "N/A",
             )
         )

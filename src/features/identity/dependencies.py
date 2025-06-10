@@ -67,6 +67,7 @@ def get_token_blocklist_service() -> TokenBlocklistService:
 
 
 def get_access_token_bearer() -> AccessTokenBearer:
+    print("Aaaa")
     return AccessTokenBearer(
         token_service=get_token_service(),
         blocklist_service=get_token_blocklist_service(),

@@ -1,12 +1,12 @@
-from pydantic import Field, EmailStr, BaseModel
 from uuid import UUID
+
+from pydantic import EmailStr, BaseModel
 
 
 class MinimalUserDTO(BaseModel):
     email: str
     uid: UUID
     role: str
-    is_verified: bool
 
 class TokenDTO(BaseModel):
     access_token: str

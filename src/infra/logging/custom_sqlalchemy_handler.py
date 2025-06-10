@@ -5,17 +5,18 @@ import logging
 from datetime import datetime, timezone
 from typing import Optional, Union
 
-from aiologger.handlers.base import Handler # Base handler from aiologger
+from aiologger.formatters.base import Formatter  # Aiologger's base formatter
+from aiologger.handlers.base import Handler  # Base handler from aiologger
 from aiologger.levels import LogLevel
-from aiologger.formatters.base import Formatter # Aiologger's base formatter
 from aiologger.records import LogRecord
 
-# Assuming your ORM model for logs is here
-from src.infra.persistence.models.log_orm import LogEntryORM
 # Assuming your async session maker is here
 from src.infra.persistence.connection.sqlalchemy_engine import AsyncSessionLocal
+# Assuming your ORM model for logs is here
+from src.infra.persistence.models.log_orm import LogEntryORM
+
+
 # Assuming your async engine is here (passed to handler)
-from src.infra.persistence.connection.sqlalchemy_engine import async_engine as global_async_engine
 
 class CustomSQLAlchemyHandler(Handler):
     """
@@ -62,7 +63,6 @@ class CustomSQLAlchemyHandler(Handler):
         async with self.async_session_maker() as session:
             try:
                 formatted_message = self.formatter.format(record)
-
                 log_entry = LogEntryORM(
                     log_level=record.levelname,
                     source=record.name or record.module,

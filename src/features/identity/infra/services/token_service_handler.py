@@ -41,5 +41,5 @@ class TokenServiceHandler(TokenService):
         try:
             return jwt.decode(token, key=self.secret_key, algorithms=[self.algorithm])
         except jwt.PyJWTError as e:
-            logging.error(f"Token decode error: {str(e)}")
+            logger.error(f"Token decode error: {str(e)}")
             return None
