@@ -1,4 +1,4 @@
-# Neuro Employees App
+# NeuroAI
 
 # Table of Contents
 
@@ -33,7 +33,7 @@ First, you'll need to manually create an app on the platform:
 [Facebook Developer Console](https://developers.facebook.com/apps/)
 
 <div style="display: flex; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/5935d6d6-b80f-486f-acd7-2dfc223dc051" alt="createapp" width="400">
+  <img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/1st.png?raw=true" width="400">
 </div>
 
 <div style="display: flex; gap: 10px;">
@@ -68,7 +68,7 @@ Once you’ve added the Instagram tester account, you’ll be asked to grant per
 #### 6. Make Requests to the Instagram Endpoint
 Finally, run the provided script and make a request to the following endpoint:
 ```
-{domain}/api/v1/instagram/app-setup-task 
+{domain}/v1/instagram/app-setup-task 
 ```
 or
 ```
