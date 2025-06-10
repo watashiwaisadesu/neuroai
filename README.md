@@ -63,7 +63,7 @@ For now, skip the app verification process to make your app publicly available. 
 #### 5. Grant Permissions
 Once you’ve added the Instagram tester account, you’ll be asked to grant permissions. This step is essential to ensure access to the required APIs.
 
-<img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/ss.png?raw=true" width="400">
+<img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/9th.png?raw=true" width="400">
 
 #### 6. Make Requests to the Instagram Endpoint
 Finally, run the provided script and make a request to the following endpoint:
