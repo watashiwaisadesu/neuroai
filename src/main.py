@@ -1,5 +1,4 @@
 import logging
-import sys
 
 # Import core configuration and logging setup
 from src.config import Settings
@@ -7,13 +6,13 @@ from src.infra.logging.setup_async_logging import setup_async_logging, async_log
 
 # Import the new modular components
 from src.app_lifespan import lifespan
-from src.api.main_router import main_api_router
+from src.main_router import main_api_router
 from src.exception_handlers import app_exception_handler, custom_validation_exception_handler
 from src.core.base.exception import AppException
 from src.infra.persistence.models.models_loader import import_all_orm_models
 from src.middleware import register_middleware # NEW IMPORT
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 
 
