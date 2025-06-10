@@ -37,33 +37,33 @@ First, you'll need to manually create an app on the platform:
 </div>
 
 <div style="display: flex; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/f5b271a2-ad1d-486f-9c13-1552b913c946" alt="Screenshot" width="300" height="150">
-  <img src="https://github.com/user-attachments/assets/74d7f319-1b58-46c6-acbf-36121556e791" alt="createapp" width="300">
-  <img src="https://github.com/user-attachments/assets/5020ce4c-472c-4649-b58b-094ea24ab6e5" alt="Screenshot" width="300">
+  <img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/2nd.png?raw=true" alt="Screenshot" width="300" height="150">
+  <img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/3rd.png?raw=true" alt="createapp" width="300">
+  <img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/4th.png?raw=true" alt="Screenshot" width="300">
 </div>
 
 #### 2. Configure Products in the App
 After creating the app, you need to enable the **Webhook Product** and **Instagram API Product**:
 
 <div style="display: flex; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/788dc969-e631-4238-9927-dad5ca4d583b" width="300">
-  <img src="https://github.com/user-attachments/assets/cd511ce3-a59f-4eef-a045-4ad605896e2b" alt="Screenshot" width="300">
+  <img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/5th.png?raw=true" width="300">
+  <img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/6th.png?raw=true" alt="Screenshot" width="300">
 </div>
 
 #### 3. Update App Settings and Turn on Live Mode
 Next, go to the **App Settings** section in the left sidebar, fill out the required form fields, and turn on **Live Mode** for your app:
 
-<img src="https://github.com/user-attachments/assets/432f575e-5204-4a60-b679-f8ad8725f284" width="400">
+<img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/7th.png?raw=true" width="400">
 
 #### 4. Add Instagram Tester Accounts
 For now, skip the app verification process to make your app publicly available. Instead, add Instagram tester accounts by username:
 
-<img src="https://github.com/user-attachments/assets/ac9a0462-86a0-4804-a5dc-ac86b7f0b3fb" width="400">
+<img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/8th.png?raw=true" width="400">
 
 #### 5. Grant Permissions
 Once you’ve added the Instagram tester account, you’ll be asked to grant permissions. This step is essential to ensure access to the required APIs.
 
-<img src="https://github.com/user-attachments/assets/f984ef9d-e901-4f52-9906-6ba4f25eb26e" width="400">
+<img src="https://github.com/watashiwaisadesu/neuroai/blob/main/public/images/ss.png?raw=true" width="400">
 
 #### 6. Make Requests to the Instagram Endpoint
 Finally, run the provided script and make a request to the following endpoint:
